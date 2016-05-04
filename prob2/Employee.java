@@ -1,6 +1,6 @@
 // Employee abstract superclass
 
-public abstract class Employee {
+public abstract class Employee implements Payable {
 	private String firstName;
 	private String lastName;
 	private String socialSecurityNumber;
@@ -44,4 +44,9 @@ public abstract class Employee {
 
 	// abstract method to be overridden
 	public abstract double earnings();
+
+	// implement Payable interface
+	public double getPaymentAmount() {
+		return earnings();
+	}
 }
