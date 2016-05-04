@@ -11,6 +11,6 @@ p2:
 run1:
 	@java -cp bin/ prob1 
 run2:
-	@java -cp bin/ PayrollSystemTest
+	@java -cp bin/ PayableInterfaceTest
 clean:
 	rm -rf bin/
