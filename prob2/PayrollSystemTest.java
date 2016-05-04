@@ -29,10 +29,18 @@ public class PayrollSystemTest {
 			System.out.println(current);
 			// check if it's a BasePlusCommissionEmployee
 			if(current instanceof BasePlusCommissionEmployee) {
-				// todo...
-				;
+				// downcasting
+				BasePlusCommissionEmployee e = (BasePlusCommissionEmployee) current;
+				// increase base salary by 10%
+				e.setBaseSalary(1.10 * e.getBaseSalary());
+				System.out.printf("new base salary with 10%% increase is: $%,.2f\n", e.getBaseSalary());
 			}
 			System.out.printf("earned $%,.2f\n\n", current.earnings());
+		}
+
+		// print type name of each object
+		for(int i=0; i<employees.length; i++) {
+			System.out.printf("Employee %d is a %s\n", i, employees[i].getClass().getName());
 		}
 	}
 }
